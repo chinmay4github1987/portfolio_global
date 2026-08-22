@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chinmay Moharana</title>
-<meta name="description" content="Chinmay Moharana — Android &amp; mobile application engineer in Bangalore. Nearly eight years shipping ecommerce, edutech, pet healthcare and hypermarket retail apps in Kotlin and Java.">
+<title>Chinmay Moharana — Android &amp; Backend Engineer</title>
+<meta name="description" content="Chinmay Moharana — Android &amp; full-stack engineer in Bangalore. Nearly eight years shipping ecommerce, edutech, pet healthcare and hypermarket retail — Kotlin &amp; Kotlin Multiplatform on the client, Spring Boot microservices and PostgreSQL on the server, with live order tracking across customer, vendor and delivery apps.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
@@ -371,6 +371,54 @@ footer{border-top:1px solid var(--line-soft);padding:26px 0;background:var(--ink
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+
+/* ---------- systems / architecture ---------- */
+.systems{background:var(--ink-2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.arch{
+  border:1px solid var(--line-soft);border-radius:20px;
+  background:radial-gradient(120% 90% at 50% 0%,rgba(244,166,60,.06),transparent 60%),linear-gradient(180deg,var(--surface),var(--ink));
+  padding:clamp(20px,4vw,38px);position:relative;overflow:hidden;
+}
+.arch-cap{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:14px}
+.arch-tier{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.arch-rail{width:2px;height:24px;margin:8px auto;background:linear-gradient(180deg,var(--amber-dim),rgba(184,122,38,.15));border-radius:2px}
+.node{
+  flex:1 1 160px;max-width:230px;border:1px solid var(--line);border-radius:13px;
+  background:var(--surface);padding:12px 14px;display:flex;flex-direction:column;gap:6px;
+  transition:transform .18s,border-color .2s,box-shadow .2s;
+}
+.node:hover{transform:translateY(-3px);border-color:var(--amber-dim);box-shadow:0 14px 30px -18px rgba(0,0,0,.8)}
+.node .nh{display:flex;align-items:center;gap:9px}
+.node .ni{width:28px;height:28px;border-radius:9px;background:var(--surface-2);display:grid;place-items:center;color:var(--amber);font-size:14px;flex:none}
+.node .nt{font-family:var(--f-display);font-weight:800;font-size:.95rem;color:var(--text);letter-spacing:-.01em}
+.node .nd{font-family:var(--f-mono);font-size:10px;color:var(--muted);letter-spacing:.02em;line-height:1.5}
+.node.client{background:linear-gradient(155deg,rgba(84,213,164,.12),transparent);border-color:rgba(84,213,164,.3)}
+.node.client .ni{color:var(--mint);background:rgba(84,213,164,.12)}
+.node.gw{flex-basis:100%;max-width:560px;flex-direction:row;align-items:center;justify-content:center;text-align:center;
+  background:linear-gradient(155deg,rgba(244,166,60,.16),rgba(244,166,60,.03));border-color:rgba(244,166,60,.34)}
+.node.gw .nt{font-size:1rem}
+.node.svc{flex:1 1 128px;max-width:180px;padding:10px 12px}
+.node.svc .ni{width:24px;height:24px;font-size:12px;border-radius:8px}
+.node.svc .nt{font-size:.86rem}
+.node.data{flex:1 1 150px;max-width:210px;background:linear-gradient(155deg,rgba(29,65,79,.5),transparent)}
+.node.data .ni{color:var(--text);background:linear-gradient(150deg,#1D414F,#12303A)}
+.node.live{border-color:rgba(84,213,164,.4);background:linear-gradient(155deg,rgba(84,213,164,.1),transparent)}
+.node.live .ni{color:var(--mint);background:rgba(84,213,164,.14)}
+.arch-note{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:20px;
+  font-family:var(--f-mono);font-size:10.5px;letter-spacing:.05em;color:var(--muted);text-align:center}
+.arch-note b{color:var(--mint);font-weight:400}
+.legend{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:8px}
+.legend span{display:inline-flex;align-items:center;gap:7px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted)}
+.legend i{width:10px;height:10px;border-radius:3px;flex:none}
+.legend .lc{background:rgba(84,213,164,.6)}
+.legend .lg{background:rgba(244,166,60,.7)}
+.legend .ls{background:var(--surface-2);border:1px solid var(--line)}
+.legend .ld{background:#1D414F}
+/* actor gallery caption color per role */
+.shot figcaption b.role-c{color:var(--mint)}
+.shot figcaption b.role-v{color:var(--amber)}
+.shot figcaption b.role-d{color:var(--coral)}
+.ttrack{font-family:var(--f-mono);font-size:7px;letter-spacing:.02em}
 </style>
 </head>
 <body>
@@ -382,6 +430,7 @@ footer{border-top:1px solid var(--line-soft);padding:26px 0;background:var(--ink
       <li><a href="#about">About</a></li>
       <li><a href="#career">Career</a></li>
       <li><a href="#work">Work</a></li>
+      <li><a href="#systems">Systems</a></li>
       <li><a href="#skills">Skills</a></li>
     </ul>
     <a class="nav-cta" href="#contact">Get in touch</a>
@@ -393,16 +442,17 @@ footer{border-top:1px solid var(--line-soft);padding:26px 0;background:var(--ink
   <div class="wrap hero-grid">
     <div>
       <span class="status"><span class="dot"></span> Open to freelance &amp; contract</span>
-      <h1>Android engineer.<em>Bangalore, India.</em></h1>
-      <p class="hero-lead">Nearly eight years building production mobile apps for <strong>ecommerce</strong>, <strong>edutech</strong>, <strong>pet healthcare</strong> and <strong>hypermarket retail</strong> — from the first Kotlin module to the staged Play Store rollout. I care about the screens people actually touch: fast lists, honest loading states, and checkouts that never lose a payment.</p>
+      <h1>Android &amp; backend engineer.<em>Bangalore, India.</em></h1>
+      <p class="hero-lead">Nearly eight years building production apps for <strong>ecommerce</strong>, <strong>edutech</strong>, <strong>pet healthcare</strong> and <strong>hypermarket retail</strong> — from the first Kotlin module to the staged Play Store rollout. Increasingly full-stack: <strong>Kotlin Multiplatform</strong> shared across client apps, <strong>Spring Boot microservices</strong> and <strong>PostgreSQL</strong> on the server, and <strong>live order tracking</strong> wired across customer, vendor and delivery apps.</p>
       <div class="btns">
         <a class="btn btn-a" href="#work">See the work &rarr;</a>
-        <a class="btn btn-b" href="#contact">Email me</a>
+        <a class="btn btn-b" href="#systems">System design &rarr;</a>
       </div>
       <div class="facts">
         <div class="fact"><b>7+</b><span>Years shipping</span></div>
         <div class="fact"><b>50K+</b><span>App installs</span></div>
-        <div class="fact"><b>7</b><span>Squad led</span></div>
+        <div class="fact"><b>3</b><span>Marketplace apps</span></div>
+        <div class="fact"><b>7</b><span>Microservices</span></div>
       </div>
     </div>
 
@@ -450,15 +500,16 @@ footer{border-top:1px solid var(--line-soft);padding:26px 0;background:var(--ink
     <div class="about rv">
       <div>
         <div class="eyebrow">About</div>
-        <h2 style="font-size:clamp(1.9rem,4.4vw,3rem);margin-bottom:20px">I build the Android half of the product.</h2>
+        <h2 style="font-size:clamp(1.9rem,4.4vw,3rem);margin-bottom:20px">I build the app — and increasingly the server behind it.</h2>
         <p>I started writing Android in 2018 and never really stopped. Most of what I have shipped since falls into two worlds — <strong>ecommerce</strong>, where a dropped payment is a real customer lost, and <strong>edutech</strong>, where tens of thousands of students open the app on the same morning and expect it to just work.</p>
-        <p>Day to day that means <strong>Kotlin and Java</strong> against a Jetpack stack: MVVM, Coroutines and Flow, Room for offline, Retrofit at the edges. I work from design handoff through release — reading Figma and XD files as carefully as I read API contracts, then owning the build variants, the staged rollout and the crash dashboard afterwards.</p>
-        <p>Currently at <strong>Test Yantra Software Solutions</strong> in Bangalore, where I coordinate a seven-person cross-functional squad. Comfortable working remote, and available for freelance builds alongside it.</p>
+        <p>Day to day that means <strong>Kotlin and Java</strong> against a Jetpack stack: MVVM, Coroutines and Flow, Room for offline, Retrofit at the edges. Lately I share business logic through a <strong>Kotlin Multiplatform</strong> core and own the backend it talks to — <strong>Spring Boot microservices</strong> behind an API gateway, persisted in <strong>PostgreSQL</strong>, with live tracking pushed over WebSockets to the customer, vendor and delivery apps at once.</p>
+        <p>Currently at <strong>Test Yantra Software Solutions</strong> in Bangalore, where I coordinate a seven-person cross-functional squad. I work from design handoff through release and keep an eye on the crash dashboard afterwards. Comfortable working remote, and available for freelance builds alongside it.</p>
       </div>
       <ul class="detail-list">
         <li><span>Location</span> Bangalore, Karnataka</li>
         <li><span>Current</span> Test Yantra Software Solutions</li>
-        <li><span>Focus</span> Android &middot; Kotlin &middot; Java</li>
+        <li><span>Focus</span> Android &middot; Kotlin Multiplatform &middot; Spring Boot</li>
+        <li><span>Backend</span> Spring Boot &middot; PostgreSQL &middot; Microservices</li>
         <li><span>Domains</span> Ecommerce, Edutech, Pet healthcare, Hypermarket retail</li>
         <li><span>Email</span> <a href="mailto:chinmaymoharana2011@gmail.com">chinmaymoharana2011@gmail.com</a></li>
         <li><span>Phone</span> <a href="tel:+918249866956">+91 82498 66956</a></li>
@@ -490,8 +541,10 @@ footer{border-top:1px solid var(--line-soft);padding:26px 0;background:var(--ink
             <li>Built secure transaction flows: tokenised payment gateway integration, encrypted local storage and certificate-pinned API traffic.</li>
             <li>Reduced cold-start time and ANR rate through layout flattening, R8 tuning and systematic Crashlytics triage each release cycle.</li>
             <li>Set up Gradle build variants and staged rollouts so regressions are caught at 5% before they reach the full install base.</li>
+            <li>Extended into the backend: built <b>Spring Boot microservices</b> behind an API gateway for the ecommerce platform — catalogue, order, payment and delivery services persisted in <b>PostgreSQL</b>, communicating over REST and an event bus.</li>
+            <li>Moved shared domain and networking logic into a <b>Kotlin Multiplatform</b> core so the customer, vendor and delivery clients reuse one validated codebase instead of three.</li>
           </ul>
-          <div class="tags"><span class="tag">Kotlin</span><span class="tag">MVVM</span><span class="tag">Jetpack</span><span class="tag">Coroutines</span><span class="tag">Room</span><span class="tag">Firebase</span><span class="tag">Play Console</span></div>
+          <div class="tags"><span class="tag">Kotlin</span><span class="tag">Kotlin Multiplatform</span><span class="tag">MVVM</span><span class="tag">Jetpack</span><span class="tag">Coroutines</span><span class="tag">Room</span><span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span><span class="tag">Microservices</span><span class="tag">Firebase</span><span class="tag">Play Console</span></div>
         </div>
       </article>
 
@@ -841,6 +894,170 @@ footer{border-top:1px solid var(--line-soft);padding:26px 0;background:var(--ink
   </div>
 </section>
 
+<!-- ===================== SYSTEMS / BACKEND ===================== -->
+<section id="systems" class="systems">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Systems &amp; backend</div>
+      <h2>One marketplace, three apps, seven services.</h2>
+      <p>The ecommerce work isn't just a client app — it's a small platform. A <strong>Kotlin Multiplatform</strong> core shares domain models and networking across the customer, vendor and delivery apps, all talking to <strong>Spring Boot microservices</strong> behind an API gateway, persisted in <strong>PostgreSQL</strong>, with live tracking pushed over WebSockets.</p>
+    </div>
+
+    <!-- Architecture diagram -->
+    <div class="arch rv">
+      <div class="arch-cap">Client apps &middot; Kotlin Multiplatform shared core</div>
+      <div class="arch-tier">
+        <div class="node client">
+          <div class="nh"><span class="ni">&#128717;</span><span class="nt">Customer app</span></div>
+          <div class="nd">Browse, cart, checkout, live order tracking</div>
+        </div>
+        <div class="node client">
+          <div class="nh"><span class="ni">&#127978;</span><span class="nt">Vendor app</span></div>
+          <div class="nd">Accept orders, manage stock &amp; catalogue</div>
+        </div>
+        <div class="node client">
+          <div class="nh"><span class="ni">&#128667;</span><span class="nt">Delivery app</span></div>
+          <div class="nd">Pickups, navigation, location broadcast</div>
+        </div>
+      </div>
+
+      <div class="arch-rail"></div>
+
+      <div class="arch-tier">
+        <div class="node gw">
+          <div class="nh"><span class="ni">&#8646;</span><span class="nt">API Gateway&nbsp;&middot;&nbsp;Auth &amp; routing</span></div>
+        </div>
+      </div>
+
+      <div class="arch-rail"></div>
+
+      <div class="arch-cap">Spring Boot microservices</div>
+      <div class="arch-tier">
+        <div class="node svc"><div class="nh"><span class="ni">&#128273;</span><span class="nt">Identity</span></div><div class="nd">JWT, roles, OTP</div></div>
+        <div class="node svc"><div class="nh"><span class="ni">&#128722;</span><span class="nt">Catalogue</span></div><div class="nd">Products, search</div></div>
+        <div class="node svc"><div class="nh"><span class="ni">&#128179;</span><span class="nt">Order &amp; Pay</span></div><div class="nd">Cart, idempotent pay</div></div>
+        <div class="node svc"><div class="nh"><span class="ni">&#128230;</span><span class="nt">Inventory</span></div><div class="nd">Stock, vendors</div></div>
+        <div class="node svc live"><div class="nh"><span class="ni">&#128506;</span><span class="nt">Delivery &amp; Tracking</span></div><div class="nd">WebSocket location</div></div>
+        <div class="node svc"><div class="nh"><span class="ni">&#128276;</span><span class="nt">Notification</span></div><div class="nd">FCM, email, SMS</div></div>
+      </div>
+
+      <div class="arch-rail"></div>
+
+      <div class="arch-cap">Data &amp; messaging</div>
+      <div class="arch-tier">
+        <div class="node data"><div class="nh"><span class="ni">&#128451;</span><span class="nt">PostgreSQL</span></div><div class="nd">Primary + read replica, per-service schema</div></div>
+        <div class="node data"><div class="nh"><span class="ni">&#9889;</span><span class="nt">Redis</span></div><div class="nd">Sessions &amp; catalogue cache</div></div>
+        <div class="node data"><div class="nh"><span class="ni">&#128260;</span><span class="nt">Event bus</span></div><div class="nd">Kafka / RabbitMQ &middot; order &amp; delivery events</div></div>
+      </div>
+
+      <div class="legend">
+        <span><i class="lc"></i> Client (KMP)</span>
+        <span><i class="lg"></i> Gateway</span>
+        <span><i class="ls"></i> Microservice</span>
+        <span><i class="ld"></i> Data / messaging</span>
+      </div>
+      <div class="arch-note"><b>Live tracking:</b> the delivery app broadcasts GPS &rarr; Tracking service &rarr; WebSocket &rarr; customer &amp; vendor see the courier move in real time.</div>
+    </div>
+
+    <!-- Three sides of the marketplace -->
+    <div class="sec-head rv" style="margin-top:clamp(48px,7vw,80px);margin-bottom:clamp(24px,4vw,36px)">
+      <h2 style="font-size:clamp(1.5rem,3.4vw,2.3rem)">Three sides of the marketplace.</h2>
+      <p>The same shared core rendered for three very different jobs — the shopper who buys, the vendor who fulfils, and the rider who delivers.</p>
+    </div>
+
+    <div class="shots rv">
+
+      <!-- Customer -->
+      <figure class="shot">
+        <div class="phone" role="img" aria-label="Mockup of the customer marketplace order tracking screen">
+          <div class="phone-screen">
+            <div class="sb"><span>9:41</span><span class="sb-r"><i class="sb-bar" style="height:5px"></i><i class="sb-bar" style="height:7px"></i><i class="sb-bar" style="height:9px"></i></span></div>
+            <div class="scr">
+              <div class="scr-h"><div><div class="s">Order #48213</div><div class="t">Arriving now</div></div><div class="av"></div></div>
+              <div class="map">
+                <svg viewBox="0 0 200 120" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M16 100 C 58 92, 70 52, 110 46 S 170 30, 186 18" fill="none" stroke="#F4A63C" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"></path>
+                  <circle cx="16" cy="100" r="5" fill="#54D5A4"></circle>
+                  <circle cx="186" cy="18" r="5" fill="#F4A63C"></circle>
+                  <circle cx="110" cy="46" r="7" fill="#0F232C" stroke="#54D5A4" stroke-width="2.5"></circle>
+                </svg>
+              </div>
+              <div class="card hi">
+                <div class="row"><span class="av" style="width:20px;height:20px"></span><div class="row-txt"><span class="ln b lit"></span><span class="ln c" style="margin-top:5px"></span></div><span class="pill live">6 min</span></div>
+              </div>
+              <div class="steps">
+                <div class="step done"><i></i><span class="ln c lit"></span></div>
+                <div class="step done"><i></i><span class="ln b lit"></span></div>
+                <div class="step now"><i></i><span class="ln d lit"></span></div>
+                <div class="step"><i></i><span class="ln c"></span></div>
+              </div>
+              <div class="bnav"><i class="bn"></i><i class="bn"></i><i class="bn on"></i><i class="bn"></i></div>
+            </div>
+          </div>
+        </div>
+        <figcaption><b class="role-c">Customer</b> Live tracking</figcaption>
+      </figure>
+
+      <!-- Vendor -->
+      <figure class="shot">
+        <div class="phone" role="img" aria-label="Mockup of the vendor app incoming orders screen">
+          <div class="phone-screen">
+            <div class="sb"><span>9:41</span><span class="sb-r"><i class="sb-bar" style="height:5px"></i><i class="sb-bar" style="height:7px"></i><i class="sb-bar" style="height:9px"></i></span></div>
+            <div class="scr">
+              <div class="scr-h"><div><div class="s">Fresh Basket &middot; Store</div><div class="t">Incoming</div></div><span class="pill live"><span class="dot" style="width:5px;height:5px;animation:none"></span> Open</span></div>
+              <div class="grid2">
+                <div class="tile"><span class="tinylabel">New</span><span class="val">5</span></div>
+                <div class="tile"><span class="tinylabel">Preparing</span><span class="val">3</span></div>
+              </div>
+              <div class="card hi">
+                <div class="row" style="justify-content:space-between"><span class="pill on">#48213</span><span class="price">&#8377; 4,598</span></div>
+                <div class="row"><span class="sq">&#128717;</span><div class="row-txt"><span class="ln a lit"></span><span class="ln c" style="margin-top:5px"></span></div><span class="pill">3</span></div>
+                <div class="row" style="gap:6px;margin-top:2px"><span class="cta-s" style="flex:1;margin:0;background:var(--surface-2);color:var(--text-2)">Reject</span><span class="cta-s" style="flex:1;margin:0">Accept</span></div>
+              </div>
+              <span class="tinylabel">Queue</span>
+              <div class="card" style="padding:7px 9px"><div class="row"><span class="thumb i2" style="width:24px;height:24px;border-radius:7px;flex:none"></span><div class="row-txt"><span class="ln b lit"></span></div><span class="pill">#48212</span></div></div>
+              <div class="card" style="padding:7px 9px"><div class="row"><span class="thumb i3" style="width:24px;height:24px;border-radius:7px;flex:none"></span><div class="row-txt"><span class="ln c lit"></span></div><span class="pill">#48211</span></div></div>
+              <div class="bnav"><i class="bn on"></i><i class="bn"></i><i class="bn"></i><i class="bn"></i></div>
+            </div>
+          </div>
+        </div>
+        <figcaption><b class="role-v">Vendor</b> Incoming orders</figcaption>
+      </figure>
+
+      <!-- Delivery -->
+      <figure class="shot">
+        <div class="phone" role="img" aria-label="Mockup of the delivery partner navigation screen">
+          <div class="phone-screen">
+            <div class="sb"><span>9:41</span><span class="sb-r"><i class="sb-bar" style="height:5px"></i><i class="sb-bar" style="height:7px"></i><i class="sb-bar" style="height:9px"></i></span></div>
+            <div class="scr">
+              <div class="scr-h"><div><div class="s">On duty &middot; Rider</div><div class="t">Next drop</div></div><span class="pill live"><span class="dot" style="width:5px;height:5px;animation:none"></span> Live</span></div>
+              <div class="map" style="height:104px">
+                <svg viewBox="0 0 200 140" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M20 122 C 54 110, 60 78, 96 70 S 158 52, 182 26" fill="none" stroke="#54D5A4" stroke-width="3" stroke-linecap="round"></path>
+                  <circle cx="20" cy="122" r="6" fill="#F4A63C" stroke="#0F232C" stroke-width="2"></circle>
+                  <circle cx="182" cy="26" r="5" fill="#F2705F"></circle>
+                  <circle cx="96" cy="70" r="4" fill="#54D5A4"></circle>
+                </svg>
+              </div>
+              <div class="card hi">
+                <div class="row"><span class="sq" style="color:var(--mint)">&#128663;</span><div class="row-txt"><span class="ln a lit"></span><span class="ln c" style="margin-top:5px"></span></div><span class="pill on">1.4 km</span></div>
+              </div>
+              <div class="grid2">
+                <div class="tile"><span class="tinylabel">Today</span><span class="val">12</span></div>
+                <div class="tile"><span class="tinylabel">Earnings</span><span class="val">&#8377;860</span></div>
+              </div>
+              <div class="cta-s">Arrived at drop &rarr;</div>
+              <div class="bnav"><i class="bn"></i><i class="bn on"></i><i class="bn"></i><i class="bn"></i></div>
+            </div>
+          </div>
+        </div>
+        <figcaption><b class="role-d">Delivery</b> Navigation &amp; earnings</figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
 <!-- ===================== SKILLS ===================== -->
 <section id="skills">
   <div class="wrap">
@@ -861,14 +1078,19 @@ footer{border-top:1px solid var(--line-soft);padding:26px 0;background:var(--ink
         <div class="chips"><span class="chip">Jetpack Compose</span><span class="chip">Hilt / Dagger</span><span class="chip">WorkManager</span><span class="chip">Firebase</span><span class="chip">Crashlytics</span><span class="chip">Play Console</span><span class="chip">Git</span><span class="chip">Postman</span><span class="chip">Figma</span><span class="chip">Adobe XD</span></div>
       </div>
       <div class="skillcard w">
+        <h3>Backend &amp; data</h3>
+        <div class="lvl">Working knowledge</div>
+        <div class="chips"><span class="chip">Spring Boot</span><span class="chip">REST APIs</span><span class="chip">Microservices</span><span class="chip">API Gateway</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">JWT / OAuth</span><span class="chip">WebSockets</span><span class="chip">Docker</span><span class="chip">Kafka / RabbitMQ</span></div>
+      </div>
+      <div class="skillcard w">
         <h3>Cross-platform &amp; web</h3>
         <div class="lvl">Working knowledge</div>
-        <div class="chips"><span class="chip">Flutter</span><span class="chip">React Native</span><span class="chip">PHP</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">REST APIs</span></div>
+        <div class="chips"><span class="chip">Kotlin Multiplatform</span><span class="chip">Flutter</span><span class="chip">React Native</span><span class="chip">PHP</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">MongoDB</span></div>
       </div>
       <div class="skillcard e">
         <h3>Currently learning</h3>
         <div class="lvl">Exploring</div>
-        <div class="chips"><span class="chip">AI</span><span class="chip">Machine learning</span><span class="chip">RAG</span><span class="chip">LLMs</span><span class="chip">LangChain</span><span class="chip">Python</span><span class="chip">MongoDB</span><span class="chip">Cyber security</span><span class="chip">Kotlin Multiplatform</span></div>
+        <div class="chips"><span class="chip">AI</span><span class="chip">Machine learning</span><span class="chip">RAG</span><span class="chip">LLMs</span><span class="chip">LangChain</span><span class="chip">Python</span><span class="chip">Kubernetes</span><span class="chip">Cyber security</span></div>
       </div>
     </div>
   </div>
@@ -896,6 +1118,16 @@ footer{border-top:1px solid var(--line-soft);padding:26px 0;background:var(--ink
         <span class="num">03</span>
         <h3>Payments &amp; secure flows</h3>
         <p>Gateway integration, tokenised checkout, Keystore-backed storage and certificate pinning — the parts where getting it almost right is not good enough.</p>
+      </div>
+      <div class="panel">
+        <span class="num">04</span>
+        <h3>Backend &amp; system design</h3>
+        <p>The server behind the app: Spring Boot microservices, a PostgreSQL schema that won't fight you later, an API gateway, and live tracking over WebSockets — designed so the mobile and web clients share one contract.</p>
+      </div>
+      <div class="panel">
+        <span class="num">05</span>
+        <h3>Kotlin Multiplatform core</h3>
+        <p>Pull your domain models, validation and networking into one shared module so Android, iOS and desktop stop drifting apart. Ship features once, test them once.</p>
       </div>
     </div>
 
@@ -979,7 +1211,7 @@ footer{border-top:1px solid var(--line-soft);padding:26px 0;background:var(--ink
 <footer>
   <div class="wrap foot">
     <span>&copy; 2026 Chinmay Moharana</span>
-    <span>Android &middot; Kotlin &middot; Bangalore, India</span>
+    <span>Android &middot; Kotlin Multiplatform &middot; Spring Boot &middot; Bangalore, India</span>
   </div>
 </footer>
 
